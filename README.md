@@ -4,11 +4,11 @@
 ## Usage
 
 Create `generator.json` file in root directory like below:
-`{
-	"baseUri": "http://example.com",
-	"pages": [
-		"/example"
-	]
+`{\n
+	"baseUri": "http://example.com",\n
+	"pages": [\n
+		"/example"\n
+	]\n
 }`
 
 Run `generator.json` file in command line
