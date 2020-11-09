@@ -4,11 +4,11 @@
 ## Usage
 
 Create `generator.json` file in root directory like below:
-`{\n
-	"baseUri": "http://example.com",\n
-	"pages": [\n
-		"/example"\n
-	]\n
+`{
+	"baseUri": "http://example.com",
+	"pages": [
+		"/example"
+	]
 }`
 
 Run `generator.json` file in command line
@@ -16,5 +16,6 @@ Run `generator.json` file in command line
 
 ## Flags
 
-For now there exists only one flag `--output-dir`, which by default is set to `output`. Your command should look like below:
+For now there exists only one flag `--output-dir`, which by default is set to 'output'. If directory was created before, output will be inserted into this directory. If you want to specify other directory, try command below:
+
 `php generator.json --output-dir "some-directory"`
