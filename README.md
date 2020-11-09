@@ -4,6 +4,7 @@
 ## Usage
 
 Create `generator.json` file in root directory like below:
+
 `{
 	"baseUri": "http://example.com",
 	"pages": [
@@ -11,7 +12,9 @@ Create `generator.json` file in root directory like below:
 	]
 }`
 
-Run `generator.json` file in command line
+Then run `generator.json` file in command line
+
+Next step is redirecting all requests into output directory
 
 
 ## Flags
