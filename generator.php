@@ -1,12 +1,5 @@
 <?php
 
-$acceptedParams = ['--output-dir'];
-
-function extractParam(array $possible, string $name, ?string $value) {
-	if (in_array($name, $possible)) {
-		return $value;
-	}
-}
 
 function getParam(string $name, array $params)
 {
@@ -14,13 +7,7 @@ function getParam(string $name, array $params)
 		return $params[$key+1];
 	}
 }
-// echo $argv[1];
 
-// extractParam($acceptedParams, $argv[1], $argv[2] ?? '');
-$outputDir = getParam('--output-dir', $argv) ?? 'output';
-// createOutputDir($outputDir);
-
-// Create folder
 function createOutputDir(string $name)
 {
 	if (!file_exists('./'.$name)) {
@@ -70,9 +57,9 @@ function getResponseForUri(string $uri)
 	return curl_exec($ch);
 }
 
-// createFile($outputDir.'/alan/turing', 'tekst.txt');
 
 if (file_exists('./generator.json')) {
+	$outputDir = getParam('--output-dir', $argv) ?? 'output';
 	$config = file_get_contents('./generator.json');
 	$config = json_decode($config);
 
